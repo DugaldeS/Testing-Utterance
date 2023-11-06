@@ -9,7 +9,7 @@ export default {
     script: [
       {
         src: 'https://utteranc.es/client.js',
-        repo: "Testing-Utterance",
+        repo: "DugaldeS/Testing-Utterance",
         'issue-term': "pathname",
         label: "comments",
         theme: "github-light",
