@@ -4,5 +4,11 @@
   },
   "HeaderView": {
     "description": "Auto imported from components/global/HeaderView.vue"
+  },
+  "Pagination": {
+    "description": "Auto imported from components/global/Pagination.vue"
+  },
+  "Utteranc": {
+    "description": "Auto imported from components/global/utteranc.vue"
   }
 }

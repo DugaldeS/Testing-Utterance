@@ -1,5 +1,7 @@
 export const FooterView = () => import('../..\\components\\global\\FooterView.vue' /* webpackChunkName: "components/footer-view" */).then(c => wrapFunctional(c.default || c))
 export const HeaderView = () => import('../..\\components\\global\\HeaderView.vue' /* webpackChunkName: "components/header-view" */).then(c => wrapFunctional(c.default || c))
+export const Pagination = () => import('../..\\components\\global\\Pagination.vue' /* webpackChunkName: "components/pagination" */).then(c => wrapFunctional(c.default || c))
+export const Utteranc = () => import('../..\\components\\global\\utteranc.vue' /* webpackChunkName: "components/utteranc" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

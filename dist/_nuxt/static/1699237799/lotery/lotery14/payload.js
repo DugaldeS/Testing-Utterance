@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/lotery/lotery14", {data:[{lotery:{slug:"lotery14",num:14,id:"row-w79s_nxp7.rdpa",Drawdate:"2020-11-13T00:00:00",WinningNumbers:"06 07 14 28 59",megaball:7,multiplier:"02",dir:"\u002Flotery",path:"\u002Flotery\u002Flotery14",extension:".json",createdAt:"2023-11-06T02:27:37.301Z",updatedAt:"2023-10-09T03:54:22.730Z"}}],fetch:{},mutations:void 0});

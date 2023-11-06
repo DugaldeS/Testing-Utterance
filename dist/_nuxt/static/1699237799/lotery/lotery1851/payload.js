@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/lotery/lotery1851", {data:[{lotery:{slug:"lotery1851",num:1851,id:"row-8dde-e2v2.wz2k",Drawdate:"2003-07-18T00:00:00",WinningNumbers:"29 30 34 38 44",megaball:39,multiplier:0,dir:"\u002Flotery",path:"\u002Flotery\u002Flotery1851",extension:".json",createdAt:"2023-11-06T02:27:37.301Z",updatedAt:"2023-10-09T03:54:22.730Z"}}],fetch:{},mutations:void 0});

@@ -7,7 +7,7 @@
 	  },
 	  computed: {
 	    ...mapState({
-	      lottery: (state) => state.lotteries.data,
+	      lotteries: (state) => state.lotteries.data,
 	    })
 	  }
 	}

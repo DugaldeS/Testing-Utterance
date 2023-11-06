@@ -1,7 +1,7 @@
-exports.ids = [3,1,2];
+exports.ids = [5,1,2];
 exports.modules = {
 
-/***/ 23:
+/***/ 27:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24,7 +24,7 @@ var staticRenderFns = [];
 // CONCATENATED MODULE: ./components/global/HeaderView.vue?vue&type=template&id=1ca6be64&
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(2);
+var componentNormalizer = __webpack_require__(3);
 
 // CONCATENATED MODULE: ./components/global/HeaderView.vue
 
@@ -48,7 +48,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 24:
+/***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71,7 +71,7 @@ var staticRenderFns = [];
 // CONCATENATED MODULE: ./components/global/FooterView.vue?vue&type=template&id=60e0c207&
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(2);
+var componentNormalizer = __webpack_require__(3);
 
 // CONCATENATED MODULE: ./components/global/FooterView.vue
 
@@ -95,14 +95,14 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 25:
+/***/ 30:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=15d197fa&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=95d5deaa&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -112,7 +112,7 @@ var render = function render() {
     return _vm._ssrNode("<li>", "</li>", [_c('NuxtLink', {
       attrs: {
         "to": {
-          name: 'lotery-slug',
+          name: 'loteries-slug',
           params: {
             slug: lotery.slug
           }
@@ -123,23 +123,33 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=15d197fa&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=95d5deaa&
+
+// EXTERNAL MODULE: external "vuex"
+var external_vuex_ = __webpack_require__(5);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=script&lang=js&
+
 /* harmony default export */ var lib_vue_loader_options_pagesvue_type_script_lang_js_ = ({
-  async asyncData({
-    $content
+  async fetch({
+    params,
+    store: {
+      dispatch,
+      getters
+    }
   }) {
-    const loteries = await $content('lotery').fetch();
-    return {
-      loteries
-    };
+    await dispatch('getLotteries');
+  },
+  computed: {
+    ...Object(external_vuex_["mapState"])({
+      lottery: state => state.lotteries.data
+    })
   }
 });
 // CONCATENATED MODULE: ./pages/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var pagesvue_type_script_lang_js_ = (lib_vue_loader_options_pagesvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(2);
+var componentNormalizer = __webpack_require__(3);
 
 // CONCATENATED MODULE: ./pages/index.vue
 
@@ -163,7 +173,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var pages = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {HeaderView: __webpack_require__(23).default,FooterView: __webpack_require__(24).default})
+installComponents(component, {HeaderView: __webpack_require__(27).default,FooterView: __webpack_require__(28).default})
 
 
 /***/ })

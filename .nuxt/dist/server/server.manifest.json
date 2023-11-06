@@ -3,15 +3,19 @@
   "files": {
     "components/footer-view.js": "components/footer-view.js",
     "components/header-view.js": "components/header-view.js",
+    "components/pagination.js": "components/pagination.js",
+    "components/utteranc.js": "components/utteranc.js",
     "pages/index.js": "pages/index.js",
-    "pages/lotery/_slug.js": "pages/lotery/_slug.js",
+    "pages/loteries/_slug.js": "pages/loteries/_slug.js",
     "server.js": "server.js"
   },
   "maps": {
     "components/footer-view.js": "components/footer-view.js.map",
     "components/header-view.js": "components/header-view.js.map",
+    "components/pagination.js": "components/pagination.js.map",
+    "components/utteranc.js": "components/utteranc.js.map",
     "pages/index.js": "pages/index.js.map",
-    "pages/lotery/_slug.js": "pages/lotery/_slug.js.map",
+    "pages/loteries/_slug.js": "pages/loteries/_slug.js.map",
     "server.js": "server.js.map"
   }
 }
