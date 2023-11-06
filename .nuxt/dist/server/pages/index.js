@@ -102,7 +102,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=95d5deaa&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=dcb532de&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -123,7 +123,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=95d5deaa&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=dcb532de&
 
 // EXTERNAL MODULE: external "vuex"
 var external_vuex_ = __webpack_require__(5);
@@ -138,11 +138,11 @@ var external_vuex_ = __webpack_require__(5);
       getters
     }
   }) {
-    await dispatch('getLotteries');
+    await dispatch('getLoteries');
   },
   computed: {
     ...Object(external_vuex_["mapState"])({
-      lottery: state => state.lotteries.data
+      loteries: state => state.loteries.data
     })
   }
 });

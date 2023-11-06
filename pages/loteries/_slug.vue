@@ -3,16 +3,16 @@ import { mapState } from 'vuex'
 
 export default {
   async fetch({ i18n, context, params, store, store: { dispatch, getters } }) {
-    await dispatch('getLottery', params)
+    await dispatch('getLotery', params)
     await dispatch('getReadMore', {
           slug: params.slug,
-          tags: Object.keys(store.state.lotteries.data)
+          tags: Object.keys(store.state.loteries.data)
    })
    await dispatch('getPrevNext', params)
   },
   computed: {
     ...mapState({
-      lottery: (state) => state.lottery.data,
+      lotery: (state) => state.lotery.data,
       readMore: (state) => state.readMore.data,
       prevNext: (state) => state.prevNext.data,
     })

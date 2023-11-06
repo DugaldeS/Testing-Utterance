@@ -2,12 +2,12 @@ import STATUS_TYPES from './config/statusTypes'
 import { parsesJSON } from './utils'
 
 const state = () => ({
-  lotteries: {
+  loteries: {
     status: STATUS_TYPES.INIT,
     error: null,
     data: []
   },
-  lottery: {
+  lotery: {
     status: STATUS_TYPES.INIT,
     error: null,
     data: {}
@@ -25,13 +25,13 @@ const state = () => ({
 });
 /* All states mutations */
 const mutations = {
-  GET_LOTTERIES(state, payload) {
-    state.lotteries.data = payload
-    state.lotteries.status = STATUS_TYPES.SUCCESS
+  GET_LOTERIES(state, payload) {
+    state.loteries.data = payload
+    state.loteries.status = STATUS_TYPES.SUCCESS
   },
-  GET_LOTTERY(state, payload) {
-    state.lottery.data = payload
-    state.lottery.status = STATUS_TYPES.SUCCESS
+  GET_LOTERY(state, payload) {
+    state.lotery.data = payload
+    state.lotery.status = STATUS_TYPES.SUCCESS
   },
   GET_READ_MORE(state, payload) {
      state.readMore.data = payload
@@ -44,31 +44,31 @@ const mutations = {
 };
 /* All states getters */
 const getters = {
-  getLotteries: (state) => parsesJSON(state.lotteries),
-  getLottery: (state) => parsesJSON(state.lottery),
+  getLoteries: (state) => parsesJSON(state.loteries),
+  getLotery: (state) => parsesJSON(state.lotery),
   getPrevNext: (state) => parsesJSON(state.prevNext),
   getReadMore: (state) => parsesJSON(state.readMore)
 };
 /* All states actions */
 const actions = {
-  async getLotteries({ commit }, params, callback) {
-    const storeLotteries = await this.$content('lottery')
+  async getLoteries({ commit }, params, callback) {
+    const storeLoteries = await this.$content('lotery')
       .limit(12)
       .fetch()
-    commit('GET_LOTTERIES', storeLotteries)
+    commit('GET_LOTERIES', storeLoteries)
   },
-  async getLottery({ commit }, params, callback) {
-    const storeLottery = await this.$content('lottery', params.slug).fetch()
-    commit('GET_LOTTERY', storeLottery)
+  async getLotery({ commit }, params, callback) {
+    const storeLotery = await this.$content('lotery', params.slug).fetch()
+    commit('GET_LOTERY', storeLotery)
   },
   async getPrevNext({ commit }, params, callback) {
-    const [prev, next] = await this.$content('lottery')
+    const [prev, next] = await this.$content('lotery')
       .surround(params.slug)
       .fetch()
     commit('GET_PREV_NEXT', { prev, next })
   },
   async getReadMore({ commit }, params, callback) {	
-     const storeReadMore = await this.$content('lottery')
+     const storeReadMore = await this.$content('lotery')
        .where({
          slug: { $ne: params.slug },
        })

@@ -695,12 +695,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const state = () => ({
-  lotteries: {
+  loteries: {
     status: _config_statusTypes__WEBPACK_IMPORTED_MODULE_0__["default"].INIT,
     error: null,
     data: []
   },
-  lottery: {
+  lotery: {
     status: _config_statusTypes__WEBPACK_IMPORTED_MODULE_0__["default"].INIT,
     error: null,
     data: {}
@@ -718,13 +718,13 @@ const state = () => ({
 });
 /* All states mutations */
 const mutations = {
-  GET_LOTTERIES(state, payload) {
-    state.lotteries.data = payload;
-    state.lotteries.status = _config_statusTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SUCCESS;
+  GET_LOTERIES(state, payload) {
+    state.loteries.data = payload;
+    state.loteries.status = _config_statusTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SUCCESS;
   },
-  GET_LOTTERY(state, payload) {
-    state.lottery.data = payload;
-    state.lottery.status = _config_statusTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SUCCESS;
+  GET_LOTERY(state, payload) {
+    state.lotery.data = payload;
+    state.lotery.status = _config_statusTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SUCCESS;
   },
   GET_READ_MORE(state, payload) {
     state.readMore.data = payload;
@@ -737,29 +737,29 @@ const mutations = {
 };
 /* All states getters */
 const getters = {
-  getLotteries: state => Object(_utils__WEBPACK_IMPORTED_MODULE_1__["parsesJSON"])(state.lotteries),
-  getLottery: state => Object(_utils__WEBPACK_IMPORTED_MODULE_1__["parsesJSON"])(state.lottery),
+  getLoteries: state => Object(_utils__WEBPACK_IMPORTED_MODULE_1__["parsesJSON"])(state.loteries),
+  getLotery: state => Object(_utils__WEBPACK_IMPORTED_MODULE_1__["parsesJSON"])(state.lotery),
   getPrevNext: state => Object(_utils__WEBPACK_IMPORTED_MODULE_1__["parsesJSON"])(state.prevNext),
   getReadMore: state => Object(_utils__WEBPACK_IMPORTED_MODULE_1__["parsesJSON"])(state.readMore)
 };
 /* All states actions */
 const actions = {
-  async getLotteries({
+  async getLoteries({
     commit
   }, params, callback) {
-    const storeLotteries = await this.$content('lottery').limit(12).fetch();
-    commit('GET_LOTTERIES', storeLotteries);
+    const storeLoteries = await this.$content('lotery').limit(12).fetch();
+    commit('GET_LOTERIES', storeLoteries);
   },
-  async getLottery({
+  async getLotery({
     commit
   }, params, callback) {
-    const storeLottery = await this.$content('lottery', params.slug).fetch();
-    commit('GET_LOTTERY', storeLottery);
+    const storeLotery = await this.$content('lotery', params.slug).fetch();
+    commit('GET_LOTERY', storeLotery);
   },
   async getPrevNext({
     commit
   }, params, callback) {
-    const [prev, next] = await this.$content('lottery').surround(params.slug).fetch();
+    const [prev, next] = await this.$content('lotery').surround(params.slug).fetch();
     commit('GET_PREV_NEXT', {
       prev,
       next
@@ -768,7 +768,7 @@ const actions = {
   async getReadMore({
     commit
   }, params, callback) {
-    const storeReadMore = await this.$content('lottery').where({
+    const storeReadMore = await this.$content('lotery').where({
       slug: {
         $ne: params.slug
       }

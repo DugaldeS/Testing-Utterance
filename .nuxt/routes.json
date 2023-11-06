@@ -3,14 +3,12 @@
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Dvud_\\\\OneDrive\\\\Escritorio\\\\Tarea-4\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_e60fa114"
+    "chunkName": "pages/index"
   },
   {
     "name": "loteries-slug",
     "path": "/loteries/:slug?",
     "component": "C:\\\\Users\\\\Dvud_\\\\OneDrive\\\\Escritorio\\\\Tarea-4\\\\pages\\\\loteries\\\\_slug.vue",
-    "chunkName": "pages/loteries/_slug",
-    "_name": "_12944896"
+    "chunkName": "pages/loteries/_slug"
   }
 ]

@@ -3,11 +3,11 @@
 
 	export default {
 	  async fetch({ params, store: { dispatch, getters } }) {
-	    await dispatch('getLotteries')
+	    await dispatch('getLoteries')
 	  },
 	  computed: {
 	    ...mapState({
-	      lotteries: (state) => state.lotteries.data,
+	      loteries: (state) => state.loteries.data,
 	    })
 	  }
 	}
