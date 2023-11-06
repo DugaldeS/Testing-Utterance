@@ -1,0 +1,16 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Dvud_\\\\OneDrive\\\\Escritorio\\\\Tarea-4\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_e60fa114"
+  },
+  {
+    "name": "lotery-slug",
+    "path": "/lotery/:slug?",
+    "component": "C:\\\\Users\\\\Dvud_\\\\OneDrive\\\\Escritorio\\\\Tarea-4\\\\pages\\\\lotery\\\\_slug.vue",
+    "chunkName": "pages/lotery/_slug",
+    "_name": "_6cd44353"
+  }
+]
